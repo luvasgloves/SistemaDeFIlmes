@@ -1,12 +1,18 @@
-﻿namespace SistemaDeFilmes.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SistemaDeFilmes.Models
 {
     public class MovieModel
     {
-        public int Year { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public string Year { get; set; }
         public string Title { get; set; }
         public string Studios { get; set; }
-        public List<ProducerModel> Producers { get; set; }
-        public bool? Winner { get; set; }
+        public string Producer { get; set; }
+        public bool Winner { get; set; }
 
 
     }

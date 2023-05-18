@@ -1,3 +1,12 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using SistemaDeFilmes.Data;
+using SistemaDeFilmes.Repositorios;
+using SistemaDeFilmes.Repositorios.Interfaces;
+using SistemaDeFilmes.Services;
+using SistemaDeFilmes.Services.Interfaces;
+using System;
+
 namespace SistemaDeFilmes
 {
     public class Program
@@ -6,16 +15,23 @@ namespace SistemaDeFilmes
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<SistemaDeFilmesContext>(opt => opt.UseInMemoryDatabase("FilmesDb"));
+
             // Add services to the container.
 
+            builder.Services.AddScoped<IMovieModelInterface, MovieModelRepository>();
+
+            builder.Services.AddScoped<IMovieModelService, MovieModelService>();
+
             builder.Services.AddControllers();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddSwaggerGen();
-            var startup = new Startup(builder.Configuration);
-            startup.ConfigureServices(builder.Services);
+
             var app = builder.Build();
-            startup.Configure(app, builder.Environment);
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -27,10 +43,17 @@ namespace SistemaDeFilmes
 
             app.UseAuthorization();
 
-
             app.MapControllers();
+
+            CSVSeed.AppBuild(app);
 
             app.Run();
         }
+
+
+
     }
+
 }
+public partial class Program { }
+

@@ -4,11 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaDeFilmes.Data;
 using SistemaDeFilmes.Models;
+using SistemaDeFilmes.Services.Interfaces;
 using System.Globalization;
 
 namespace SistemaDeFilmes.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
@@ -18,12 +19,12 @@ namespace SistemaDeFilmes.Controllers
         {
             _dbContext = dbContext;
         }
-        private void SeedData()
+        
+
+        [HttpGet]
+        public ProducerAwardsModel Get([FromServices] IMovieModelService moviesService)
         {
-            var csv = new CsvReader(new StreamReader("SistemaDeFilmes.Data.movielist.csv"), CultureInfo.InvariantCulture);
-            var movies = csv.GetRecords<MovieModel>().ToList();
-            _dbContext.AddRange(movies);
-            _dbContext.SaveChanges();
+            return moviesService.GetIntervaloPremios();
         }
     }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Data\movielist.csv" />
+    <Compile Remove="CSVInjection\**" />
+    <Content Remove="CSVInjection\**" />
+    <EmbeddedResource Remove="CSVInjection\**" />
+    <None Remove="CSVInjection\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Data\movielist.csv" />
+    <None Remove="Data\movielist.csv" />
+    <None Remove="movielist.csv" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +31,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="SistemaDeFilmesTest" />
   </ItemGroup>
 
 </Project>

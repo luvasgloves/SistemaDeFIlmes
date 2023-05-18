@@ -5,7 +5,7 @@ namespace SistemaDeFilmes.Data
 {
     public class SistemaDeFilmesContext : DbContext
     {
-        public SistemaDeFilmesContext(DbContextOptions<SistemaDeFilmesContext> options) : base(options)
+        public SistemaDeFilmesContext(DbContextOptions options) : base(options)
         {
         }
         protected override void OnConfiguring

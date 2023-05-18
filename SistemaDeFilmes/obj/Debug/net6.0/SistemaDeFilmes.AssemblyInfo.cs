@@ -18,6 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaDeFilmes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeFilmes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("SistemaDeFilmesTest")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

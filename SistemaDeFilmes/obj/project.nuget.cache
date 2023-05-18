@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L1kfPf3S0j9ReWVG7SZ9L3H8tYXw9Q30R2jwUhu8WsWgMmz6ti3qySPVT46dg1UQpGD3x4tBIl+4RReh3ecjWw==",
+  "dgSpecHash": "21XsPWDSkUl9lIUXKKO405iVle8A2tdzSakAxe6N01qkpkJXBVY7VoZV8GDAOBJZpqFvIpP5YXvS4UjHhIADCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucas.ribeiro\\source\\repos\\SistemaDeFilmes\\SistemaDeFilmes\\SistemaDeFilmes.csproj",
   "expectedPackageFiles": [
@@ -21,8 +21,8 @@
     "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.0\\microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",
     "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
-    "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\lucas.ribeiro\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
