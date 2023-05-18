@@ -1,5 +1,4 @@
-Especificação do Teste
-Desenvolva uma API RESTful para possibilitar a leitura da lista de indicados e vencedores
+Desenvolvimento de uma API RESTful para possibilitar a leitura da lista de indicados e vencedores
 da categoria Pior Filme do Golden Raspberry Awards.
 Requisito do sistema:
 1. Ler o arquivo CSV dos filmes e inserir os dados em uma base de dados ao iniciar a
